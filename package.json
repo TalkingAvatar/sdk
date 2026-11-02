@@ -1,0 +1,57 @@
+{
+  "name": "@talkingavatar/sdk",
+  "version": "0.1.0",
+  "description": "Realistic Avatars SDK by Talking Avatar: photorealistic talking avatars for voice agents, streamed to your page in real time. Node.js server client and browser view. Paid service, $0.02 per minute.",
+  "license": "MIT",
+  "author": "Talking Avatar (https://talking-avatar.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalkingAvatar/sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TalkingAvatar/sdk/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./live": {
+      "types": "./dist/live.d.ts",
+      "import": "./dist/live.js"
+    }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "avatar",
+    "talking-avatar",
+    "live-avatar",
+    "photoreal",
+    "realistic-avatar",
+    "webrtc",
+    "livekit",
+    "voice-agent",
+    "tts"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.9"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://docs.talking-avatar.dev/realistic-avatars/overview"
+}

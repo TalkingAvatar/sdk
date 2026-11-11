@@ -20,7 +20,7 @@ in real time. For AI interviewers, tutors, support and sales assistants.
 - **Real time:** speech appears on the avatar's lips moments after you send it, ready for live conversation.
   Interruptions (barge-in) are handled in one call.
 - **Voice and video in sync,** delivered together over WebRTC. No media servers to run.
-- **Drop-in for LiveKit:** the avatar can join your LiveKit room as a participant instead.
+- **Drop-in for LiveKit:** the avatar can join your LiveKit room as a participant instead (on LiveKit Agents in Python, use our plugin, `livekit-plugins-talkingavatar`).
 - **A few lines of code** on your server and your page. The SDK handles streaming, playback and reconnection.
 
 > **Looking for something free?** [`@interviewflowai/talking-avatar`](https://github.com/interviewflowai/talking-avatar)
@@ -139,6 +139,10 @@ tts.on("audio", (pcm) => avatar.pushAudio(pcm));
 ```
 
 Your LiveKit client plays the tracks, so `LiveAvatarView` isn't needed.
+
+Agent on LiveKit Agents in Python? Use our plugin instead of this package:
+`pip install livekit-plugins-talkingavatar` ([PyPI](https://pypi.org/project/livekit-plugins-talkingavatar/),
+[guide](https://docs.talking-avatar.dev/realistic-avatars/livekit#livekit-agents-python)).
 
 ## Avatars
 

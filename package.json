@@ -53,5 +53,8 @@
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://docs.talking-avatar.dev/realistic-avatars/overview"
+  "homepage": "https://docs.talking-avatar.dev/realistic-avatars/overview",
+  "publishConfig": {
+    "access": "public"
+  }
 }
